@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Brain Embassy | Next-Gen Learning Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Tailwind config setup for simple class-driven dark mode switching
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animate-glow {
+            animation: pulseGlow 4s ease-infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="p-2 bg-blue-600 rounded-lg text-white">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <span class="text-lg font-black tracking-wider text-blue-700 dark:text-blue-400">BRAIN EMBASSY</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggler Button -->
+                <button onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:ring-2 hover:ring-blue-500/50 transition-all text-slate-700 dark:text-slate-300">
+                    <i id="theme-icon" data-lucide="moon" class="w-4 h-4"></i>
+                </button>
+                <a href="https://wa.me/2348167571656" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors shadow-lg shadow-blue-600/10">
+                    Contact Administration
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Pitch Section -->
+    <header class="max-w-6xl mx-auto px-6 pt-12 pb-8 text-center relative w-full">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 dark:from-blue-500/10 dark:to-transparent blur-3xl rounded-full pointer-events-none -z-10"></div>
+        <span class="text-[10px] font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Prototyped Concept Pitch</span>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight mt-4 mb-4 max-w-3xl mx-auto leading-tight">
+            Nurturing Minds, Shaping <span class="bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-teal-400 bg-clip-text text-transparent">Global Leaders.</span>
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-xl mx-auto mb-6">
+            Welcome to the official digital portal for The Brain Embassy. Access institutional notifications, dynamic calendars, and interactive remote learning portals instantly.
+        </p>
+    </header>
+
+    <!-- Main Live Operational Sections Group -->
+    <main class="max-w-6xl mx-auto px-6 pb-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Announcements & Events (8/12 wide) -->
+        <div class="lg:col-span-8 space-y-8">
+            
+            <!-- Section 1: Parents Announcement Board -->
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4 mb-6">
+                    <div class="flex items-center gap-2.5">
+                        <i data-lucide="megaphone" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+                        <h2 class="text-lg font-bold tracking-tight">Active Announcement Board</h2>
+                    </div>
+                    <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Updated Live
+                    </span>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Notification 1 -->
+                    <div class="p-4 rounded-2xl bg-amber-500/5 border border-amber-500/20 flex gap-4 items-start">
+                        <div class="p-2 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-xl shrink-0">
+                            <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 block mb-1">Term Examination Notice</span>
+                            <h3 class="text-sm font-bold mb-1 text-slate-800 dark:text-slate-200">Third Term Examination Schedules Released</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Parents are encouraged to view and confirm receipt of individual study frameworks sent out today.</p>
+                        </div>
+                    </div>
+
+                    <!-- Notification 2 -->
+                    <div class="p-4 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex gap-4 items-start">
+                        <div class="p-2 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-xl shrink-0">
+                            <i data-lucide="info" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 block mb-1">Inter-House Sports Management</span>
+                            <h3 class="text-sm font-bold mb-1 text-slate-800 dark:text-slate-200">Sportswear Distribution Framework</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Color group kits are now accessible directly via the desk administrative officers tomorrow morning.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Online Virtual Class Portal -->
+            <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+                <div class="border-b border-slate-100 dark:border-slate-800 pb-4 mb-6">
+                    <div class="flex items-center gap-2.5">
+                        <i data-lucide="video" class="w-5 h-5 text-indigo-600 dark:text-indigo-400"></i>
+                        <h2 class="text-lg font-bold tracking-tight">Embassy Smart-Class Framework</h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Standard Classroom Tier -->
+                    <div class="p-5 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-blue-500/40 transition-colors bg-slate-50/50 dark:bg-slate-950/30">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded border border-blue-500/20">Primary & Secondary</span>
+                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Live Interactive Classrooms</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Real-time structured classes for mathematics, basic science, and advanced technical arts canvases.</p>
+                        <button class="w-full text-center py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all">Launch Classroom Matrix</button>
+                    </div>
+
+                    <!-- Early Learners Tier -->
+                    <div class="p-5 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-indigo-500/40 transition-colors bg-slate-50/50 dark:bg-slate-950/30">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-mono bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/20">Kindergarten</span>
+                            <span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">Early-Learners Story & Activity Hub</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Recorded phonics tutorials, active storytelling, and simple assignments safe for screen durations.</p>
+                        <button class="w-full text-center py-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold transition-all">Open Activity Desk</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column: Upcoming Activities Calendar Dashboard (4/12 wide) -->
+        <aside class="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-6">
+            <div class="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-4">
+                <i data-lucide="calendar" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+                <h2 class="text-lg font-bold tracking-tight">Upcoming Activities</h2>
+            </div>
+
+            <!-- Calendar Row Items -->
+            <div class="space-y-4">
+                <!-- Activity Entry 1 -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-xl p-2.5 text-center shrink-0 min-w-[50px]">
+                        <span class="block text-xs font-mono font-black leading-none">JUL</span>
+                        <span class="block text-base font-black tracking-tight mt-0.5">03</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200">Creative Arts Exhibition Day</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Showcase galleries of models, paintings, and engineering crafts by pupils.</p>
+                    </div>
+                </div>
+
+                <!-- Activity Entry 2 -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-purple-500/10 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 rounded-xl p-2.5 text-center shrink-0 min-w-[50px]">
+                        <span class="block text-xs font-mono font-black leading-none">JUL</span>
+                        <span class="block text-base font-black tracking-tight mt-0.5">15</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200">PTA Academic Alignment Summit</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Virtual and physical alignments highlighting digital literacy changes for next session.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-[11px] text-slate-400 dark:text-slate-600 border-t border-slate-200 dark:border-slate-900 mt-auto bg-white dark:bg-slate-950">
+        &copy; 2026 The Brain Embassy Institutional Framework. Built for elite accessibility and responsiveness.
+    </footer>
+
+    <script>
+        // Init icon scripts
+        lucide.createIcons();
+
+        // Core Theme-Switch Functions
+        function toggleTheme() {
+            const html = document.documentElement;
+            const iconButton = document.getElementById('theme-icon');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                iconButton.setAttribute('data-lucide', 'moon');
+            } else {
+                html.classList.add('dark');
+                iconButton.setAttribute('data-lucide', 'sun');
+            }
+            // Re-render matching lucide definitions
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
