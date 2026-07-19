@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Hub — Hair, Nails &amp; Beauty</title>
+<meta name="description" content="Glow Hub service menu — braids, wigs, nails, lashes and more. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum-0:#1c0b12;
+  --plum-1:#2a1019;
+  --plum-2:#3a1522;
+  --rose:#e8a2a8;
+  --gold:#d9a84e;
+  --gold-soft:#f0d9a8;
+  --cream:#f7ede2;
+  --cream-dim:#cfb9ac;
+  --line: rgba(247,237,226,0.14);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(1100px 600px at 85% -10%, rgba(217,168,78,0.14), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(232,162,168,0.10), transparent 55%),
+    var(--plum-0);
+  color:var(--cream);
+  font-family:'Manrope',sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:1120px;margin:0 auto;padding:0 1.5rem;}
+
+/* ===== Braid strand divider (signature element) ===== */
+.braid{
+  width:100%;
+  height:34px;
+  display:block;
+}
+.braid path{ fill:none; stroke-linecap:round; }
+
+/* ===== Header ===== */
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(28,11,18,0.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.15rem 0;
+}
+.brand{
+  font-family:'Fraunces',serif;
+  font-size:1.4rem;
+  font-weight:600;
+  letter-spacing:0.01em;
+}
+.brand span{ color:var(--gold); font-style:italic; }
+.nav-links{ display:flex; gap:2rem; font-size:0.92rem; font-weight:600; }
+.nav-links a{ color:var(--cream-dim); transition:color .2s; }
+.nav-links a:hover{ color:var(--gold-soft); }
+.nav-cta{
+  background:var(--gold);
+  color:var(--plum-0);
+  padding:0.6rem 1.2rem;
+  border-radius:999px;
+  font-weight:800;
+  font-size:0.85rem;
+  letter-spacing:0.02em;
+}
+.nav-mobile-hide{display:flex;}
+@media(max-width:680px){ .nav-links{display:none;} }
+
+/* ===== Hero ===== */
+.hero{
+  padding:5.5rem 0 3rem;
+  text-align:center;
+  position:relative;
+}
+.eyebrow{
+  display:inline-block;
+  font-size:0.75rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  border:1px solid var(--line);
+  padding:0.35rem 0.9rem;
+  border-radius:999px;
+  margin-bottom:1.5rem;
+}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:clamp(2.6rem, 6vw, 4.6rem);
+  line-height:1.04;
+  letter-spacing:-0.01em;
+}
+.hero h1 em{
+  font-style:italic;
+  font-weight:500;
+  color:var(--gold);
+}
+.hero p{
+  max-width:520px;
+  margin:1.4rem auto 0;
+  color:var(--cream-dim);
+  font-size:1.05rem;
+}
+.hero-actions{
+  display:flex; gap:1rem; justify-content:center; margin-top:2.2rem; flex-wrap:wrap;
+}
+.btn{
+  padding:0.85rem 1.7rem;
+  border-radius:999px;
+  font-weight:800;
+  font-size:0.92rem;
+  letter-spacing:0.01em;
+  transition:transform .18s ease, box-shadow .18s ease;
+  display:inline-flex; align-items:center; gap:0.5rem;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--gold), #b9843a);
+  color:var(--plum-0);
+  box-shadow:0 10px 28px rgba(217,168,78,0.25);
+}
+.btn-primary:hover{ transform:translateY(-2px); }
+.btn-ghost{
+  border:1px solid var(--line);
+  color:var(--cream);
+}
+.btn-ghost:hover{ border-color:var(--gold-soft); color:var(--gold-soft); }
+
+/* ===== Gallery strip ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:0.5rem;
+  margin:2.5rem auto 0;
+  max-width:1120px;
+  padding:0 1.5rem;
+}
+.gallery a{
+  aspect-ratio:3/4;
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--plum-2);
+  border:1px solid var(--line);
+  position:relative;
+}
+.gallery img{ width:100%; height:100%; object-fit:cover; }
+.gallery a .cap{
+  position:absolute; left:0; right:0; bottom:0;
+  font-size:0.65rem; font-weight:700; letter-spacing:0.03em;
+  background:linear-gradient(0deg, rgba(0,0,0,0.65), transparent);
+  color:var(--cream); padding:0.5rem 0.5rem 0.4rem;
+  opacity:0; transition:opacity .2s;
+}
+.gallery a:hover .cap{ opacity:1; }
+@media(max-width:780px){ .gallery{ grid-template-columns:repeat(3,1fr); } }
+
+/* ===== Section shell ===== */
+section{ padding:4.5rem 0; }
+.section-head{ text-align:center; margin-bottom:2.6rem; }
+.section-head h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.9rem,4vw,2.6rem);
+  font-weight:600;
+}
+.section-head h2 em{ font-style:italic; color:var(--gold); }
+.section-head p{ color:var(--cream-dim); margin-top:0.6rem; }
+
+/* ===== Menu (price list) ===== */
+.menu{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 3rem;
+}
+@media(max-width:720px){ .menu{ grid-template-columns:1fr; gap:0; } }
+
+.menu-item{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1.15rem 0;
+  border-bottom:1px dashed var(--line);
+}
+.menu-item .name{
+  font-family:'Fraunces',serif;
+  font-size:1.18rem;
+  font-weight:500;
+}
+.menu-item .name small{
+  display:block;
+  font-family:'Manrope',sans-serif;
+  font-size:0.78rem;
+  color:var(--cream-dim);
+  font-weight:500;
+  margin-top:0.15rem;
+}
+.menu-item .price{
+  font-weight:800;
+  color:var(--gold-soft);
+  font-size:1.05rem;
+  white-space:nowrap;
+}
+.menu-item .price.ask{
+  color:var(--rose);
+  font-size:0.85rem;
+  font-weight:700;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+.menu-item .price.ask a{ border-bottom:1px solid currentColor; }
+
+/* ===== Info strip ===== */
+.info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  text-align:center;
+}
+.info-card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:2rem 1.2rem;
+  background:rgba(247,237,226,0.03);
+}
+.info-card .icon{ font-size:1.6rem; margin-bottom:0.8rem; }
+.info-card h3{ font-family:'Fraunces',serif; font-weight:600; font-size:1.1rem; margin-bottom:0.4rem; }
+.info-card p{ color:var(--cream-dim); font-size:0.9rem; }
+@media(max-width:720px){ .info{ grid-template-columns:1fr; } }
+
+/* ===== Booking CTA ===== */
+.cta{
+  text-align:center;
+  border-radius:28px;
+  padding:3.5rem 2rem;
+  background:linear-gradient(135deg, rgba(217,168,78,0.14), rgba(232,162,168,0.08));
+  border:1px solid var(--line);
+}
+.cta h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.8rem,4vw,2.4rem);
+  font-weight:600;
+  margin-bottom:0.8rem;
+}
+.cta p{ color:var(--cream-dim); max-width:440px; margin:0 auto 1.8rem; }
+
+/* ===== Footer ===== */
+footer{
+  border-top:1px solid var(--line);
+  padding:2.5rem 0;
+  text-align:center;
+  color:var(--cream-dim);
+  font-size:0.85rem;
+}
+footer .brand{ font-size:1.1rem; margin-bottom:0.6rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">Glow <span>Hub</span></div>
+    <nav class="nav-links">
+      <a href="#gallery">Work</a>
+      <a href="#menu">Prices</a>
+      <a href="#book">Book</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/2340000000000" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Lagos · Booking on WhatsApp</span>
+    <h1>Hair, nails &amp;<br><em>everything glow.</em></h1>
+    <p>Braids, wigs, nails and lash appointments — book straight on WhatsApp, no forms.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#menu">See prices</a>
+      <a class="btn btn-ghost" href="https://wa.me/2340000000000" target="_blank" rel="noopener">Chat to book →</a>
+    </div>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <a href="Main.jpg"><img src="Main.jpg" alt="Glow Hub"><span class="cap">Main</span></a>
+    <a href="Braids.jpg"><img src="Braids.jpg" alt="Braids"><span class="cap">Braids</span></a>
+    <a href="Braids2.jpg"><img src="Braids2.jpg" alt="Braids"><span class="cap">Braids</span></a>
+    <a href="GoddessPassionTwists.jpg"><img src="GoddessPassionTwists.jpg" alt="Goddess passion twists"><span class="cap">Passion Twists</span></a>
+    <a href="Nails.jpg"><img src="Nails.jpg" alt="Nails"><span class="cap">Nails</span></a>
+    <a href="Nails2.jpg"><img src="Nails2.jpg" alt="Nails"><span class="cap">Nails</span></a>
+  </div>
+</section>
+
+<svg class="braid" viewBox="0 0 1200 34" preserveAspectRatio="none">
+  <path d="M0,17 C60,0 120,34 180,17 C240,0 300,34 360,17 C420,0 480,34 540,17 C600,0 660,34 720,17 C780,0 840,34 900,17 C960,0 1020,34 1080,17 C1110,8 1140,26 1200,17" stroke="#d9a84e" stroke-width="2" opacity="0.55"/>
+  <path d="M0,17 C60,34 120,0 180,17 C240,34 300,0 360,17 C420,34 480,0 540,17 C600,34 660,0 720,17 C780,34 840,0 900,17 C960,34 1020,0 1080,17 C1110,26 1140,8 1200,17" stroke="#e8a2a8" stroke-width="2" opacity="0.45"/>
+</svg>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-head">
+      <h2>The <em>menu</em></h2>
+      <p>All prices in Naira. Braid styles vary by size and length — chat first for a quote.</p>
+    </div>
+
+    <div class="menu">
+      <div>
+        <div class="menu-item">
+          <span class="name">Braids<small>Style &amp; length dependent</small></span>
+          <span class="price ask"><a href="https://wa.me/2340000000000" target="_blank" rel="noopener">Chat to price</a></span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Wig Install<small>Custom fit</small></span>
+          <span class="price">₦20k</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Installation<small>Weave / closure</small></span>
+          <span class="price">₦10k</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Dread<small>Full head</small></span>
+          <span class="price">₦15k</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Jerry Curl<small>Full head</small></span>
+          <span class="price">₦10k</span>
+        </div>
+      </div>
+      <div>
+        <div class="menu-item">
+          <span class="name">Touch Up<small>Roots / edges</small></span>
+          <span class="price">₦5k</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Nails<small>Full set</small></span>
+          <span class="price">₦5k</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Pedicure<small>Full service</small></span>
+          <span class="price">₦10k</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Lashes<small>Application</small></span>
+          <span class="price">₦3k</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="info">
+      <div class="info-card">
+        <div class="icon">💬</div>
+        <h3>Book by chat</h3>
+        <p>No forms — send a WhatsApp message with the style and your preferred day.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">📍</div>
+        <h3>Based in Lagos</h3>
+        <p>Add your address or drop-pin location here so clients know where to come.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">⏱️</div>
+        <h3>Book ahead</h3>
+        <p>Popular slots fill fast — message a day or two before to lock your spot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to book?</h2>
+      <p>Send a message with the style you want and Glow Hub will confirm your slot.</p>
+      <a class="btn btn-primary" href="https://wa.me/2340000000000" target="_blank" rel="noopener">Message on WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Glow <span style="color:var(--gold); font-style:italic;">Hub</span></div>
+  <p>© 2026 Glow Hub. All prices subject to change.</p>
+</footer>
+
+</body>
+</html>
